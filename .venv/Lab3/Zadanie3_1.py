@@ -1,0 +1,11 @@
+"""Pole prostokąta, suma, różnica i iloraz dwóch liczb."""
+a = 5
+b = 3
+pole = a * b
+suma = a + b
+roznica = a - b
+iloraz = a / b
+print("Pole =", pole)
+print("Suma =", suma)
+print("Roznica =", roznica)
+print("Iloraz =", round(iloraz, 2))
