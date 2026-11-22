@@ -1,0 +1,3 @@
+smbus2
+mpu6050-raspberrypi
+adafruit-circuitpython-vl53l0x
