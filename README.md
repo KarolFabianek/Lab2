@@ -2,7 +2,7 @@
 
 Laboratoria 1–4 na Raspberry Pi.
 
-Autorzy: inż. Karol Fabianek, inż. Adrian Drost
+Autorzy: inż. Karol Fabianek, inż. Adrian Drost, inż Paweł Fortuna
 
 | Laboratorium | Temat |
 |---|---|
