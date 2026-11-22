@@ -1,0 +1,88 @@
+Laboratorium 1 - Podstawy obsługi Raspberry Pi OS
+Polecenia wykonane w terminalu
+
+1. Orientacja w systemie
+uname -a
+cat /etc/os-release
+hostname
+whoami
+vcgencmd measure_temp
+free -h
+df -h
+cat /proc/cpuinfo | grep -i "model"
+
+2. Terminal i podstawowe komendy
+pwd
+ls -la
+cd Documents
+cd ..
+cd ~
+cd /
+cd -
+mkdir -p ~/lab01/dane ~/lab01/skrypty ~/lab01/kopie
+mkdir ~/lab02/dane
+cd ~/lab01
+touch dane/notatki.txt dane/lista.txt
+ls -R
+echo "Pierwsza linia" > dane/notatki.txt
+echo "Druga linia" > dane/notatki.txt
+echo "Trzecia linia" >> dane/notatki.txt
+cat dane/notatki.txt
+cp dane/notatki.txt kopie/notatki_kopia.txt
+mv dane/lista.txt dane/zakupy.txt
+rm kopie/notatki_kopia.txt
+nano dane/notatki.txt
+history
+
+3. System plików
+ls /
+cat /etc/hostname
+ls /boot/firmware
+ls /dev | head -20
+cat /sys/class/thermal/thermal_zone0/temp
+find ~ -name "*.txt"
+du -sh ~/lab01
+du -sh /var/log
+
+4. Użytkownicy i uprawnienia
+id
+groups
+ls -l ~/lab01/dane
+./skrypty/powitanie.sh
+chmod +x skrypty/powitanie.sh
+ls -l skrypty/powitanie.sh
+./skrypty/powitanie.sh
+chmod 640 dane/notatki.txt
+ls -l dane/notatki.txt
+cat /etc/shadow
+sudo cat /etc/shadow
+
+5. Pakiety i aktualizacje
+sudo apt update
+apt list --upgradable
+sudo apt install -y tree
+tree ~/lab01
+htop
+sudo apt remove htop
+
+6. Procesy i zasoby
+sleep 300 &
+ps aux | grep sleep
+kill <PID>
+systemctl status ssh
+systemctl list-units --type=service --state=running | head
+
+7. Sieć
+hostname -I
+ip a
+ping -c 4 8.8.8.8
+
+8. Python i venv
+python3 --version
+which python3
+mkdir project && cd project
+python3 -m venv venv
+source venv/bin/activate
+pip install numpy
+pip list
+deactivate
